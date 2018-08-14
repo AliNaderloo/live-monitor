@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>خط ۱</title>
+    <meta charset="utf-8"/>
+    <link href="./Styles/normalize.css" rel="stylesheet" type="text/css" />
+    <style>
+        @font-face {
+            font-family: 'BYekan';
+            src: url('./Fonts/BYekan.eot?#') format('eot'), url('./Fonts/BYekan.ttf') format('truetype'), url('./Fonts/BYekan.woff') format('woff');
+        }
+        *{
+            font-family: 'BYekan';
+        }
+        body{
+            background-color: #f7f7f9;
+        }
+        .card-container{
+            margin: 8px;
+        }
+        .card-row{
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+        }
+        .card{
+            font-size: 72px;
+            width: 30%;
+            margin: 0 15px;
+            display: inline-block;
+            height: 320px;
+            color: white;
+            box-shadow:3px 3px 5px 6px #ccc;
+        }
+        .in-card{
+            float: left;
+            width: 40%;
+        }
+        .in-card-2{
+            width: 60%;
+            float: left;
+            background-color: #323232;
+            height: 100%;
+            line-height: 280px;
+        }
+        .in-card div{
+            height: 33.33%;
+            line-height: 100px;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        .red{
+            background-color: #cf4647;
+        }
+        .gray{
+            background-color: steelblue;
+        }
+        .green{
+            background-color: mediumseagreen;
+        }
+        
+    </style>
+</head>
+<body cz-shortcut-listen="true" style="">
+    <!-- Elements -->
+    <div class="card-container">
+        <div class="card-row">
+            <div class="card" >
+                <div class="card-body">
+                    <div class="in-card" >
+                        <div class="gray">15</div>
+                        <div class="green">232</div>
+                        <div class="red">1</div>
+                    </div>
+                    <div class="in-card-2" >
+                        قزوین
+                    </div>
+                </div>
+            </div>
+            <div class="card" >
+                    <div class="card-body">
+                        <div class="in-card" >
+                            <div class="gray">15</div>
+                            <div class="green">232</div>
+                            <div class="red">1</div>
+                        </div>
+                        <div class="in-card-2" >
+                            قزوین
+                        </div>
+                    </div>
+                </div>
+                <div class="card" >
+                        <div class="card-body">
+                            <div class="in-card" >
+                                <div class="gray">15</div>
+                                <div class="green">232</div>
+                                <div class="red">1</div>
+                            </div>
+                            <div class="in-card-2" >
+                                قزوین
+                            </div>
+                        </div>
+                    </div>
+            
+            
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./Scripts/jquery.min.js"></script>
+    <script src="./Scripts/script.js"></script>
+</body>
+</html>
