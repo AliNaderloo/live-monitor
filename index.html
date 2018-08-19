@@ -4,6 +4,8 @@
     <title>خط ۱</title>
     <meta charset="utf-8"/>
     <link href="./Styles/normalize.css" rel="stylesheet" type="text/css" />
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <style>
         @font-face {
             font-family: 'BYekan';
@@ -12,43 +14,30 @@
         *{
             font-family: 'BYekan';
         }
-        body{
-            background-color: #f7f7f9;
+        body {
+            background: #e2e1e0;
+            text-align: center;
         }
         .card-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
             margin: 8px;
-        }
-        .card-row{
-            width: 100%;
-            display: block;
-            text-align: center;
-            margin-top: 18px;
+            margin: 8px auto;
+            justify-items: center;
         }
         .card{
-            font-size: 72px;
-            width: 30%;
-            margin: 0 15px;
-            display: inline-block;
-            height: 320px;
+            width: 185px;
+            font-size: 28px;
             color: white;
-            box-shadow:3px 3px 5px 6px #ccc;
+            /* box-shadow: 3px 3px 5px 6px #ccc; */
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: 55px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         }
-        .in-card{
-            float: left;
-            width: 40%;
-        }
-        .in-card-2{
-            width: 60%;
-            float: left;
-            background-color: #323232;
-            height: 100%;
-            line-height: 280px;
-        }
-        .in-card div{
-            height: 33.33%;
-            line-height: 100px;
-            font-weight: bold;
-            font-size: 48px;
+        .card:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         }
         .red{
             background-color: #cf4647;
@@ -59,55 +48,39 @@
         .green{
             background-color: mediumseagreen;
         }
-        
+        .red,.gray,.green{
+            grid-column: 1 / 2;
+            text-align: center;
+            font-size: 15px;
+            height: 19px;
+            line-height: 19px;
+        }
+        .in-card{
+            grid-column: 2 / 4;
+            grid-row: 1 / 4;
+            background-color: #323232;
+            text-align: center;
+            font-size: 23px;
+            line-height: 52px;
+            
+        }
+        .cards-col{
+            display: grid;
+            grid-gap: 8px;
+            grid-auto-rows: 50px;
+        }
     </style>
 </head>
 <body cz-shortcut-listen="true" style="">
     <!-- Elements -->
-    <div class="card-container">
-        <div class="card-row">
-            <div class="card" >
-                <div class="card-body">
-                    <div class="in-card" >
-                        <div class="gray">15</div>
-                        <div class="green">232</div>
-                        <div class="red">1</div>
-                    </div>
-                    <div class="in-card-2" >
-                        قزوین
-                    </div>
-                </div>
+    <div id="app">
+        <div  class="card-container">
+            <div class="cards-col"  v-for="line in lines">
+                <box v-for="box in line.items"  v-bind:box="box"></box>
             </div>
-            <div class="card" >
-                    <div class="card-body">
-                        <div class="in-card" >
-                            <div class="gray">15</div>
-                            <div class="green">232</div>
-                            <div class="red">1</div>
-                        </div>
-                        <div class="in-card-2" >
-                            قزوین
-                        </div>
-                    </div>
-                </div>
-                <div class="card" >
-                        <div class="card-body">
-                            <div class="in-card" >
-                                <div class="gray">15</div>
-                                <div class="green">232</div>
-                                <div class="red">1</div>
-                            </div>
-                            <div class="in-card-2" >
-                                قزوین
-                            </div>
-                        </div>
-                    </div>
-            
-            
         </div>
     </div>
     <!-- Scripts -->
-    <script src="./Scripts/jquery.min.js"></script>
-    <script src="./Scripts/script.js"></script>
+    <script  src="./Scripts/app.js"></script>
 </body>
 </html>
