@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'BYekan';
+    src: url('../Fonts/BYekan.eot?#') format('eot'), url('../Fonts/BYekan.ttf') format('truetype'), url('../Fonts/BYekan.woff') format('woff');
+}
+*{
+    font-family: 'BYekan';
+}
+body {
+    background: #e2e1e0;
+    text-align: center;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 8px;
+    margin: 8px auto;
+    justify-items: center;
+}
+.card{
+    width: 185px;
+    font-size: 28px;
+    color: white;
+    /* box-shadow: 3px 3px 5px 6px #ccc; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 55px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.red{
+    background-color: #cf4647;
+}
+.gray{
+    background-color: steelblue;
+}
+.green{
+    background-color: mediumseagreen;
+}
+.red,.gray,.green{
+    grid-column: 1 / 2;
+    text-align: center;
+    font-size: 15px;
+    height: 19px;
+    line-height: 19px;
+}
+.in-card{
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    background-color: #323232;
+    text-align: center;
+    font-size: 23px;
+    line-height: 52px;
+    
+}
+.cards-col{
+    display: grid;
+    grid-gap: 8px;
+    grid-auto-rows: 50px;
+}

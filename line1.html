@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>خط ۱</title>
+    <meta charset="utf-8"/>
+    <link href="./Styles/normalize.css" rel="stylesheet" type="text/css" />
+    <!-- production version, optimized for size and speed -->
+    <script src="./Scripts/vue.js"></script>
+    <script src="./Scripts/axios.min.js"></script>
+    <link href="./Styles/style.css" rel="stylesheet" />
+</head>
+<body cz-shortcut-listen="true" style="">
+    <!-- Elements -->
+    <div id="app">
+        <div  class="card-container">
+            <div class="cards-col"  v-for="line in lines">
+                <box v-for="box in line.items"  v-bind:box="box"></box>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script>
+        var globObj = {} ;
+        globObj.lines = [];
+        var line1 ={
+            items :  [
+            {
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            }
+            ]
+        };
+        var line2 ={
+            items :  [
+            {
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            }
+            ]
+        };
+        var line3 ={
+            items :  [
+            {
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            },{
+                "city" : "تهران",
+                "baghalData" : 320 ,
+                "vorodData" : 50 ,
+                "khorojData" : 22
+            }
+            ]
+        };
+        globObj.lines.push(line1,line2,line3);
+        
+    </script>
+    <script  src="./Scripts/app.js"></script>
+</body>
+</html>

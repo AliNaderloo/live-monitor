@@ -6,100 +6,13 @@ Vue.component('box', {
     props: ['box'],
     template: ' <div class="card"><div class="gray">{{box.baghalData}}</div><div class="green">{{box.vorodData}}</div><div class="red">{{box.khorojData}}</div><div class="in-card" >{{box.city}}</div></div>'
 })
-var globObj = {} ;
-globObj.lines = [];
-var line1 ={
-    items :  [
-        {
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        }
-    ]
-};
-var line2 ={
-    items :  [
-        {
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        }
-    ]
-};
-var line3 ={
-    items :  [
-        {
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        },{
-            "city" : "تهران",
-            "baghalData" : 320 ,
-            "vorodData" : 50 ,
-            "khorojData" : 22
-        }
-    ]
-};
-globObj.lines.push(line1,line2,line3);
 var app = new Vue({
     el: '#app',
-    data: globObj
-})
+    data: globObj ,
+  methods: {
+    refreshBox() {
+        axios.get('http://api.parschapar.local/fetch_agent').then(response => (console.log(response.data)) )
+    }
+  }
+});
+app.refreshMessage();
